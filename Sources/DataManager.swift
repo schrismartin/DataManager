@@ -161,11 +161,7 @@ public final class DataManager {
             fatalError("Failed to locate data model schema file.")
         }
         
-        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
-            fatalError("Failed to created managed object model")
-        }
-        
-        return managedObjectModel
+        return NSManagedObjectModel(contentsOf: modelURL)
     }()
     
     
